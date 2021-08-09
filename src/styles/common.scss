@@ -1,0 +1,32 @@
+@import "config";
+
+html {
+  -webkit-overflow-scrolling: auto;
+  box-sizing: border-box;
+  width: 100%;
+  font-size: $html-font-size;
+
+  body {
+    width: 100%;
+    min-height: 100vh;
+
+    margin: 0;
+    padding: 0;
+
+    color: var(--body--font-color);
+    background: var(--body--background);
+    font-size: $body-font-size;
+  }
+}
+
+button {
+  -webkit-appearance: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.slick-slider {
+  
+}

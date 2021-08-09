@@ -1,0 +1,186 @@
+@import "../../styles/config";
+
+.m-post {
+
+  margin: 1rem 0;
+
+  border: solid 1px $post-border-color;
+  border-radius: 1.2rem;
+
+  background-color: $post-background-color;
+
+  color: $post-text-color;
+
+  @keyframes splash {
+    from {
+      opacity: 0;
+      height: 0;
+      margin: 0 0;
+      transform: scale(0, 0);
+    }
+    100% {
+      opacity: 1;
+      height: 20rem;
+      margin: 1rem 0;
+    }
+    to {
+      height: 20rem;
+      margin: 1rem 0;
+      transform: scale(1, 1);
+    }
+  }
+
+  animation: splash 0.75s normal forwards ease-in-out;
+
+  transition: all 0.25s ease;
+
+  &:hover {
+    background-color: $post-background-color-hover;
+  }
+
+  &.is-liked {
+    border-color: var(--primary-color);
+
+    .s-like-button {
+      .s-like-icon-wrapper {
+        background-color: $post-liked-color;
+      }
+      .s-like-icon {
+        fill: var(--primary-color);
+      }
+      .s-like-counter {
+        color: var(--primary-color);
+      }
+    }
+  }
+
+  .s-post-wrapper {
+    padding: 1.22rem 1.6rem 0.4rem;
+  }
+
+  .s-post-head {
+    display: flex;
+    align-items: stretch;
+
+    padding-bottom: 1.2rem;
+
+    max-height: 4.8rem;
+
+    .s-avatar {
+      width: 4.8rem;
+      border-radius: 100%;
+
+      position: relative;
+      overflow: hidden;
+
+      background-color: $post-avatar-background-color;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      &:after {
+        content: "";
+        display: block;
+        padding-bottom: 100%;
+      }
+    }
+
+    .s-autor-info {
+      margin: 0 0.4rem;
+    }
+
+    .s-title {
+      font-weight: bold;
+
+      display: block;
+    }
+
+    .s-ref {
+      color: $post-ref-color;
+
+      display: block;
+    }
+
+    .s-twitter-link {
+      display: flex;
+      align-items: center;
+
+      margin-left: auto;
+    }
+    .s-twitter-logo {
+      width: 2.5rem;
+      height: 2.5rem;
+
+      fill: var(--primary-color);
+    }
+  }
+
+  .s-post-body {
+    font-size: $post-font-size;
+    line-height: $post-font-line-height;
+  }
+
+  .s-date {
+    margin-top: 2rem;
+    padding: 0.6rem 0;
+
+    font-size: $post-date-font-size;
+    color: $post-date-font-color;
+  }
+
+  .s-post-footer {
+    padding-top: 0.6rem;
+    margin-top: 0.6rem;
+
+    border-top: solid 1px $post-border-color;
+  }
+
+  .s-like-button {
+    color: $post-like-color;
+
+    border: none;
+    background: none;
+    -webkit-appearance: none;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+
+    .s-like-icon-wrapper {
+      width: 3.2rem;
+      height: 3.2rem;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 100%;
+
+      margin-left: -0.4rem;
+    }
+
+    .s-like-icon {
+      height: 2rem;
+
+      fill: $post-like-color;
+    }
+    .s-like-counter {
+      margin-left: 0.4rem;
+
+      display: block;
+    }
+
+    &:hover {
+      .s-like-icon-wrapper {
+        background-color: $post-like-hover-background;
+      }
+      .s-like-icon {
+        fill: $post-like-hover-color;
+      }
+      .s-like-counter {
+        color: $post-like-hover-color;
+        text-decoration: underline;
+      }
+    }
+  }
+}

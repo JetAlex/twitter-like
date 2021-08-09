@@ -1,0 +1,81 @@
+@import "../../styles/config";
+
+.s-toggle-switch {
+  .label {
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+
+    transition: 0.4s;
+    color: var(--primary-color);
+  }
+
+  .switch,
+  .input:checked + .label .left,
+  .input:not(:checked) + .label .right {
+    pointer-events: all;
+    cursor: pointer;
+    color: var(--body--font-color);
+  }
+
+  .input {
+    display: none;
+  }
+
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 6rem;
+    height: 3.4rem;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--border-color);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 2.6rem;
+    width: 2.6rem;
+    left: 0.4rem;
+    bottom: 0.4rem;
+    background-color: var(--body--background);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+
+  input:checked + .label .slider {
+    background-color: var(--primary-color);
+  }
+
+  input:focus + .label .slider {
+    box-shadow: 0 0 1px var(--primary-color);
+  }
+
+  input:checked + .label .slider:before {
+    -webkit-transform: translateX(2.6rem);
+    -ms-transform: translateX(2.6rem);
+    transform: translateX(2.6rem);
+  }
+
+  .slider.round {
+    border-radius: 34px;
+  }
+
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  .left, .right {
+    margin: 0 .5em;
+  }
+}

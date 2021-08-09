@@ -1,0 +1,40 @@
+:root {
+  --body--background: #ffffff;
+  --body--font-color: #000000;
+  --primary-color: rgba(29, 161, 242, 1);
+  --border-color: rgba(207, 217, 222, 1);
+}
+
+$html-font-size: 62.5%; // 1rem = 10px
+$body-font-size: 1.6rem; // 16px
+$primary-color: var(--primary-color);
+
+$timeline-warning: rgb(224, 36, 94);
+$timeline-warning-background: rgba(224, 36, 94, 0.1);
+
+$post-border-color: rgb(207, 217, 222);
+$post-background-color: var(--body--background);
+$post-background-color-hover: rgb(247, 249, 249);
+$post-ref-color: rgb(83, 100, 113);
+$post-avatar-background-color: rgb(0, 0, 0);
+$post-text-color: rgb(15, 20, 25);
+$post-date-font-color: rgb(83, 100, 113);
+$post-date-font-size: 1.5rem;
+$post-font-size: 2rem;
+$post-font-line-height: 2.4rem;
+$post-like-hover-background: rgba(224, 36, 94, 0.1);
+$post-like-hover-color: rgb(224, 36, 94);
+$post-like-color: rgb(83, 100, 113);
+$post-liked-color: rgba(29, 161, 242, 0.1);
+
+
+$color-black: rgba(0,0,0,1);
+$background-color-btn: rgba(229,229,229,1);
+$backplate-background: rgba(0,0,0,0.1);
+
+@mixin button {
+  background: transparent;
+  border: none;
+
+  cursor: pointer;
+}
